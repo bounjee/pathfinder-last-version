@@ -190,7 +190,7 @@ textarea:not([rows]) {
   width: 1em; 
   height: 1em;
 }
-/* 
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -200,7 +200,7 @@ textarea:not([rows]) {
   box-shadow: rgba(0, 0, 0, 0.1) 0px -6px 6px -6px;
   padding: 1rem;
   z-index: 1000; 
-} */
+}
 
 .footer-container {
   display: flex;
@@ -208,7 +208,7 @@ textarea:not([rows]) {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px -6px 6px -6px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px -6px 6px -6px; */
 }
 
 .footer-links ul{

@@ -1,6 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react';
+import tripCss from '../pages/tripPage.css';
+import starIcon from '../images/stars.svg';
+import pathfinderLogo from '../images/pathfinder-new_logo.svg'
+import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import artIcon from '../images/icons/art.svg'
+import culturIcon from '../images/icons/cultur.svg'
+import foodIcon from '../images/icons/food.svg'
+import funIcon from '../images/icons/fun.svg'
+import natureIcon from '../images/icons/nature.svg'
+import shoppingIcon from '../images/icons/shopping.svg'
+import CustomSelectBox from '../components/selectBox';
+import CustomSelectBox2 from '../components/selectBox_2';
 
-const tripPage = () => {
+
+
+
+
+const TripPage = () => {
+  const [selectedIndexes, setSelectedIndexes] = useState([]);
+  const [personCount, setPersonCount] = useState(1);
+
+  const handleSelectionClick = (index) => {
+    if (selectedIndexes.includes(index)) {
+      // Eğer tıklanan kutucuk zaten seçiliyse, onu diziden çıkar
+      setSelectedIndexes(selectedIndexes.filter(i => i !== index));
+    } else {
+      // Eğer tıklanan kutucuk seçili değilse, dizinin içine ekle
+      setSelectedIndexes([...selectedIndexes, index]);
+    }
+  };
+
   return (
     // ## NAVBAR SECTION ##
 <>
@@ -19,26 +48,79 @@ const tripPage = () => {
 
         {/* // ## MAIN SECTION ## */}
 
-    <main className='main-section'>
-        <div className='main-components'>
-            <div className='main-text'>Rotanızı Planlayın!</div>
-            
-            <div className='trip-section'>
-                <div className='trip-text'>Nereye gitmek istersiniz?</div>
-                <div className='trip-date'>Yolculuk tarihini belirtiniz.</div>
+        <main>
+  <section>
+    <div className="main-title">Rotanızı Oluşturun</div>
+    <div className="secondary-title">Nereye Gitmek İstersiniz?</div>
+    <div className='select-box'> 
+      <CustomSelectBox />
+      <CustomSelectBox2 />
+    </div>
 
-                <div className='activities-section'>
-                    <div className='activities-text'>Gezeceğiniz yerde neler yapmak istersiniz?</div>
-                    <div className='activities'>Kültürel & Tarihi Gezi</div>
-                    <div className='activities'>Alışveriş</div>
-                    <div className='activities'>Resim & Sanat Etkinlikleri</div>
-                    <div className='activities'>Gastronomi Etkinlikleri</div>
-                    <div className='activities'>Eğlence & Gece Hayatı</div>
-                </div>
+
+    <div className="search-container">
+
+      {/* <select name="city" className="city-textinput">
+        <option value="">Şehir Seçin</option>
+        <option value="gaziantep">Gaziantep</option>
+        <option value="antalya">Antalya</option>
+      </select> */}
+      
+      {/* <input 
+        type="date" 
+        name="date" 
+        className="date-textinput" 
+        min={new Date().toISOString().split("T")[0]} 
+        max={new Date(new Date().setFullYear(new Date().getFullYear() + 2)).toISOString().split("T")[0]} 
+        placeholder="Tarih Seçin" 
+      /> */}
+    </div>
+    {/* <div className="main-title">Rotanızı Oluşturun</div>
+    <input type="text" placeholder="Nereye Gitmek İstersiniz?" className="selection" />
+    <input type="text" placeholder="Tarih Seçiniz?" className="selection" /> */}
+
+
+  </section>
+     <section>
+          <div className="selection-title">Yapmak İstediğiniz Aktiviteleri İşaretleyin</div>
+          <div className="selection-container">
+            {[culturIcon, shoppingIcon, natureIcon, foodIcon, artIcon, funIcon].map((icon, index) => (
+              <div
+                key={index}
+                className={`selection ${selectedIndexes.includes(index) ? 'selected' : ''}`}
+                onClick={() => handleSelectionClick(index)}
+              >
+                <img src={icon} alt="Icon" className="icon" />
+                {index === 0 && "Kültürel Gezi"}
+                {index === 1 && "Alışveriş Gezisi"}
+                {index === 2 && "Doğa Gezisi"}
+                {index === 3 && "Gastronomi Gezisi"}
+                {index === 4 && "Sanat Etkinlikleri"}
+                {index === 5 && "Eğlence Etkinlikleri"}
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className='count-container'>
+            <div className='number-text'>Kişi Sayısı?</div>
+            <div className='person-counter'>
+              <div className="person-display">
+                <div className="person-number">{personCount}</div>
+                <div className='person-text'>Kişi</div>
+              </div>
+              <div className="counter-buttons">
+              <button className="counter-btn" onClick={() => setPersonCount(Math.max(personCount - 1, 1))}>-</button>
+              <button className="counter-btn" onClick={() => setPersonCount(personCount + 1)}>+</button>
+              </div>
             </div>
+</section>
+
+<div className='custom-btn'>
+          <img src={starIcon} alt="Star Icon" className="icon" />
+          Özelleştirilmiş Rotanı Oluştur!
         </div>
-        <div className='trip-btn'>Sonraki Sayfa</div>
-    </main>
+
+</main>
 
 
 {/* // ## FOOTER SECTION ## */}
@@ -74,4 +156,4 @@ const tripPage = () => {
   )
 }
 
-export default tripPage
+export default TripPage; // Ensure this matches the component name

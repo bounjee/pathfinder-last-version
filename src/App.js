@@ -1,11 +1,16 @@
 import React from 'react';
-import LandingPage from './pages/landingPage'; // Doğru yolu kontrol et
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/landingPage';
+import CustomRoutePage from './pages/tripPage'; // Yeni sayfa bileşeni
 
 function App() {
   return (
-    <div className="App">
-      <LandingPage />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/your-custom-route" element={<CustomRoutePage />} />
+      </Routes>
+    </Router>
   );
 }
 
