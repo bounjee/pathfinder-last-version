@@ -172,6 +172,10 @@ main {
   color: white; /* Selected text color */
 }
 
+.selection:hover {
+  background-color: #e0e0e0; /* Optional hover background */
+}
+
 .selection.selected .icon {
   fill: white; /* Selected icon color */
 }

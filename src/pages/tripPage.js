@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import tripCss from '../pages/tripPage.css';
 import starIcon from '../images/stars.svg';
 import pathfinderLogo from '../images/pathfinder-new_logo.svg'
@@ -29,6 +30,13 @@ const TripPage = () => {
       setSelectedIndexes([...selectedIndexes, index]);
     }
   };
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/meal');
+  };
+  
 
   return (
     // ## NAVBAR SECTION ##
@@ -115,7 +123,7 @@ const TripPage = () => {
             </div>
 </section>
 
-<div className='custom-btn'>
+<div className='custom-btn' onClick={handleButtonClick}>
           <img src={starIcon} alt="Star Icon" className="icon" />
           Özelleştirilmiş Rotanı Oluştur!
         </div>
