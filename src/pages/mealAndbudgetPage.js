@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import pathfinderLogo from '../images/pathfinder-new_logo.svg';
 import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 import MealAndBudgetCSS from './mealAndbudgetPage.css';
@@ -38,6 +39,12 @@ const MealAndBudgetPage  = () => {
         ? prevSelectedMeals.filter((m) => m !== meal)
         : [...prevSelectedMeals, meal]
     );
+  };
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/trip');
   };
 
 
@@ -134,10 +141,12 @@ const MealAndBudgetPage  = () => {
       </div>
     </div>
 
-    <div className='custom-btn'>
+    <div className='custom-btn' onClick={handleButtonClick}>
           <img src={starIcon} alt="Star Icon" className="icon" />
           Özelleştirilmiş Rotanı Oluştur!
-        </div>    </main>
+        </div>
+ 
+         </main>
 
 {/* // ## FOOTER SECTION ## */}
 
