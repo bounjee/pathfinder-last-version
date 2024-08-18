@@ -44,7 +44,7 @@ const MealAndBudgetPage  = () => {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    navigate('/trip');
+    navigate('/progress');
   };
 
 

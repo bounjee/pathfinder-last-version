@@ -3,13 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import routeCSS from '../pages/routePage.css';
 import pathfinderLogo from '../images/pathfinder-new_logo.svg'
 import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import gaziantekImage from '../images/gaziantep_header.png'
+
 
 
 const RoutePage = () => {
   return (
     // ## NAVBAR SECTION ##
 <>
-    <navbar className='navbar'>
+    {/* <navbar className='navbar'>
         <div className='navbar-logo'>
         <a href='#'><img src={pathfinderLogo} alt="Pathfinder Icon" className="icon" />  Pathfinder</a>
         </div>
@@ -20,12 +22,12 @@ const RoutePage = () => {
         <a href='#'>Profil</a>
 
         </div>
-    </navbar>
+    </navbar> */}
 
     {/* MAIN SECTION */}
 
-    <main className='main'>
-    <header className='header'>
+    <div className='main'>
+      <header className='header'>
       <div className='header-content'>
         <div className='header-city-section'>
           <h1 className='header-city-text'>Gaziantep</h1>
@@ -52,31 +54,156 @@ const RoutePage = () => {
     </header>
 
         <route className='route'>
+          <div className="route-main">
             <div className='route-day-text'>Gaziantep Gezisinin İlk Günü</div>
             <div className='route-day-subtext'>Gezinin ilk gününe hoşgeldiniz, ilgi alanlarınıza göre oluşturulmuş rotamızı takip ederek, şehri istediğiniz şekilde gezebilirsiniz!</div>
+            <div className='box-container'>
+              <div className='route-box'>
+              <div className='route-content'>
+                  <img src={gaziantekImage} alt='Gaziantep Kalesi' className='route-image-img'/>
+                
+                <p className='route-image-text'>
+                  Lorem ipsum dolor sit amet, dolore ut labore et dolore labore et dolore magna magna magna magna magna magna aliqua. Ut enim ad minim veniam.
+                </p>
+              </div>
+              <div className='route-buttons'>
+                <button className='route-button'>Gaziantep Kalesi</button>
+                <button className='route-button'>Konum</button>
+                <button className='route-button'>Fiyat</button>
+              </div>
+            </div>
 
             <div className='route-box'>
-      <div className='route-image'>
-        <img src='/path-to-your-image.jpg' alt='Gaziantep Kalesi' className='route-image-img'/>
-      </div>
-      <div className='route-content'>
-        <p className='route-image-text'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-        </p>
-        <div className='route-buttons'>
-          <button className='route-button'>Gaziantep Kalesi</button>
-          <button className='route-button'>Konum</button>
-          <button className='route-button'>Fiyat</button>
-        </div>
-      </div>
+              <div className='route-content'>
+                  <img src={gaziantekImage} alt='Gaziantep Kalesi' className='route-image-img'/>
+                
+                <p className='route-image-text'>
+                  Lorem ipsum dolor sit amet, dolore ut labore et dolore labore et dolore magna magna magna magna magna magna aliqua. Ut enim ad minim veniam.
+                </p>
+              </div>
+              <div className='route-buttons'>
+                <button className='route-button'>Gaziantep Kalesi</button>
+                <button className='route-button'>Konum</button>
+                <button className='route-button'>Fiyat</button>
+              </div>
+            </div>
+
+            <div className='route-box'>
+              <div className='route-content'>
+                  <img src={gaziantekImage} alt='Gaziantep Kalesi' className='route-image-img'/>
+                
+                <p className='route-image-text'>
+                  Lorem ipsum dolor sit amet, dolore ut labore et dolore labore et dolore magna magna magna magna magna magna aliqua. Ut enim ad minim veniam.
+                </p>
+              </div>
+              <div className='route-buttons'>
+                <button className='route-button'>Gaziantep Kalesi</button>
+                <button className='route-button'>Konum</button>
+                <button className='route-button'>Fiyat</button>
+              </div>
+            </div>
+
+            <div className='route-box'>
+              <div className='route-content'>
+                  <img src={gaziantekImage} alt='Gaziantep Kalesi' className='route-image-img'/>
+                
+                <p className='route-image-text'>
+                  Lorem ipsum dolor sit amet, dolore ut labore et dolore labore et dolore magna magna magna magna magna magna aliqua. Ut enim ad minim veniam.
+                </p>
+              </div>
+              <div className='route-buttons'>
+                <button className='route-button'>Gaziantep Kalesi</button>
+                <button className='route-button'>Konum</button>
+                <button className='route-button'>Fiyat</button>
+              </div>
+            </div>
+
+            <div className='route-box'>
+              <div className='route-content'>
+                  <img src={gaziantekImage} alt='Gaziantep Kalesi' className='route-image-img'/>
+                
+                <p className='route-image-text'>
+                  Lorem ipsum dolor sit amet, dolore ut labore et dolore labore et dolore magna magna magna magna magna magna aliqua. Ut enim ad minim veniam.
+                </p>
+              </div>
+              <div className='route-buttons'>
+                <button className='route-button'>Gaziantep Kalesi</button>
+                <button className='route-button'>Konum</button>
+                <button className='route-button'>Fiyat</button>
+              </div>
+            </div>
+
+            <div className='route-box'>
+              <div className='route-content'>
+                  <img src={gaziantekImage} alt='Gaziantep Kalesi' className='route-image-img'/>
+                
+                <p className='route-image-text'>
+                  Lorem ipsum dolor sit amet, dolore ut labore et dolore labore et dolore magna magna magna magna magna magna aliqua. Ut enim ad minim veniam.
+                </p>
+              </div>
+              <div className='route-buttons'>
+                <button className='route-button'>Gaziantep Kalesi</button>
+                <button className='route-button'>Konum</button>
+                <button className='route-button'>Fiyat</button>
+              </div>
+            </div>
+
+            <div className='route-box'>
+              <div className='route-content'>
+                  <img src={gaziantekImage} alt='Gaziantep Kalesi' className='route-image-img'/>
+                
+                <p className='route-image-text'>
+                  Lorem ipsum dolor sit amet, dolore ut labore et dolore labore et dolore magna magna magna magna magna magna aliqua. Ut enim ad minim veniam.
+                </p>
+              </div>
+              <div className='route-buttons'>
+                <button className='route-button'>Gaziantep Kalesi</button>
+                <button className='route-button'>Konum</button>
+                <button className='route-button'>Fiyat</button>
+              </div>
+            </div>
+
+            <div className='route-box'>
+              <div className='route-content'>
+                  <img src={gaziantekImage} alt='Gaziantep Kalesi' className='route-image-img'/>
+                
+                <p className='route-image-text'>
+                  Lorem ipsum dolor sit amet, dolore ut labore et dolore labore et dolore magna magna magna magna magna magna aliqua. Ut enim ad minim veniam.
+                </p>
+              </div>
+              <div className='route-buttons'>
+                <button className='route-button'>Gaziantep Kalesi</button>
+                <button className='route-button'>Konum</button>
+                <button className='route-button'>Fiyat</button>
+              </div>
+            </div>
+
+            <div className='route-box'>
+              <div className='route-content'>
+                  <img src={gaziantekImage} alt='Gaziantep Kalesi' className='route-image-img'/>
+                
+                <p className='route-image-text'>
+                  Lorem ipsum dolor sit amet, dolore ut labore et dolore labore et dolore magna magna magna magna magna magna aliqua. Ut enim ad minim veniam.
+                </p>
+              </div>
+              <div className='route-buttons'>
+                <button className='route-button'>Gaziantep Kalesi</button>
+                <button className='route-button'>Konum</button>
+                <button className='route-button'>Fiyat</button>
+              </div>
+            </div>
+          </div>
+            </div>
+            
+            
+            
+          </route>
     </div>
-        </route>
-    </main>
 
         
 
 {/* // ## FOOTER SECTION ## */}
-
+{/* 
 <footer className="footer">
       <div className="footer-container">
         <div className="footer-links">
@@ -102,7 +229,7 @@ const RoutePage = () => {
           <p>2024 Your Company Name. All rights reserved.</p>
         </div>
       </div>
-    </footer>
+    </footer> */}
 
     </>
   )
